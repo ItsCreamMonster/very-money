@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900');
+
+body {
+    font-family: 'Source Serif 4', serif;
+    color: #fff;
+    background-color: #181818;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nums {
+    display: flex;
+}
+
+.number {
+    font-size: 10rem;
+    font-weight: 900;
+    margin: 0px;
+}
+
+.lucky {
+    text-shadow: 0px 0px 48px #ff2828;
+}
+
+.spinBtn {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    color: #e1e1e1;
+    font-size: 1.25rem;
+    /* padding: 16px 80px; */
+    padding: 16px 32px;
+    background: linear-gradient(to bottom right, #ff4444, #da0808);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 10px 0px rgb(154, 18, 18);
+    border-radius: 8px;
+    transition: all 0.1s ease-in-out;   
+}
+
+.spinBtn:disabled {
+    background: linear-gradient(to bottom right, #b0b0b0, #838383);
+    box-shadow: 0px 10px 0px rgb(71, 71, 71);
+    cursor: not-allowed;
+}
+
+.spinBtn:hover {
+    color: #ffffff;
+}
+
+
+.spinBtn:active:not(:disabled) {
+    transform: translateY(5px);
+    box-shadow: 0px 5px 0px rgb(154, 18, 18);
+}
+
+.spinPartial {
+    margin-left: 8px;
+    padding: 16px 32px;
+}
+
+#spinAllBtn {
+    opacity: 0;
+    position: absolute;
+    bottom: 25%;
+    background: linear-gradient(to bottom right, #ff9544, #da7808);
+    box-shadow: 0px 10px 0px rgb(154, 84, 18);
+    transition: all 0.1s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#spinAllBtn:active:not(:disabled) {
+    transform: translateY(5px);
+    box-shadow: 0px 5px 0px rgb(154, 84, 18);
+}
+
+#spinAllBtn:disabled {
+    cursor: default;
+}
+
+#balanceDisplay {
+    color: #00ff00;
+    margin: -32px;
+    transition: all 0.5s ease-in-out;
+}
+
+.mediumBalance {
+    color: #ffa600 !important;
+    margin: -32px;
+}
+.lowBalance {
+    color: #ff0000 !important;
+    margin: -32px;
+}
+
+#startPrompt {
+    font-size: 3rem;
+    margin: 32px 0px;
+}
+
+#resetBtn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    color: #e1e1e1;
+    font-size: .75rem;
+    padding: 8px 20px;
+    background-color: #555555;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    opacity: 25%;
+}
+
+#resetBtn:hover {
+    opacity: 75%;
+}
+
+#checkoutBtn {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    color: #e1e1e1;
+    font-size: .75rem;
+    padding: 12px 32px;
+    background-color: #555555;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    opacity: 50%;
+}
+
+#checkoutBtn:hover {
+    opacity: 80%;
+}
+
+.checkoutPopup {
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    padding: 32px 20px;
+    border-radius: 20px;
+    background: #242424;
+    border: none;
+}
+
+.checkoutPopup[open] {
+    display: flex;
+}
+
+.checkoutDiv {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.checkoutWinLoss {
+    margin: 0px 16px;
+}
+
+#checkoutBalance {
+    color: #00ff00;
+    margin: 0px;
+    margin-bottom: 8px;
+    font-size: 3rem;
+}
+
+.button {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    color: #e1e1e1;
+    font-size: .75rem;
+    padding: 8px 20px;
+    background-color: #555555;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    opacity: 50%;
+    margin: 0px 8px;
+    text-decoration: none;
+}
+
+.button:hover {
+    opacity: 80%;
+}
