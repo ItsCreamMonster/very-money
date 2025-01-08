@@ -54,7 +54,7 @@ const cookieBalance = document.cookie
 if (!cookieBalance) {
     console.error('Unable to load balance from cookies.');
     freshStart();
-} else if (cookieBalance == 0) {
+} else if (cookieBalance <= 0) {
     freshStart();
 };
 
